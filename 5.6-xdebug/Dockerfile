@@ -24,7 +24,7 @@ RUN apk add --no-cache libpng \
 
 # PECL extensions
 RUN apk add --no-cache ${PHPIZE_DEPS} \
-	&& pecl install -o -f redis xdebug-2.6.0 \
+	&& pecl install -o -f redis xdebug-2.5.5 \
 	&& docker-php-ext-enable redis xdebug \
 	&& apk del ${PHPIZE_DEPS}
 
