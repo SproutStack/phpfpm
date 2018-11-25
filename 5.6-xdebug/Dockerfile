@@ -35,3 +35,6 @@ RUN rm /usr/local/etc/php-fpm.d/zz-docker.conf
 ADD www.conf /usr/local/etc/php-fpm.d/www.conf
 
 ADD xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
+RUN apk add --no-cache ssmtp
+ADD ssmtp.conf /etc/ssmtp/ssmtp.conf

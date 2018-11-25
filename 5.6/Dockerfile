@@ -33,3 +33,6 @@ RUN echo "always_populate_raw_post_data = -1" >> /usr/local/etc/php/conf.d/depre
 RUN mkdir /var/log/php-fpm/
 RUN rm /usr/local/etc/php-fpm.d/zz-docker.conf
 ADD www.conf /usr/local/etc/php-fpm.d/www.conf
+
+RUN apk add --no-cache ssmtp
+ADD ssmtp.conf /etc/ssmtp/ssmtp.conf
