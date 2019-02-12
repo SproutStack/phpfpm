@@ -19,7 +19,7 @@ RUN apk add --no-cache libpng \
 		libxslt \
 		${_BUILD_DEPS} \
 	&& docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr --with-freetype-dir=/usr \
-	&& docker-php-ext-install gd pdo_mysql soap xsl mysqli intl bcmath zip \
+	&& docker-php-ext-install gd pdo_mysql soap xsl mysqli intl bcmath zip mcrypt \
 	&& apk del ${_BUILD_DEPS}
 
 # PECL extensions
